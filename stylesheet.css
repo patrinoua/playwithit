@@ -5,15 +5,17 @@ body{
     height: 100vh;
     background-color: black;
 }
-.animation1{
+.container{
     width: 100%;
     height: 100%;
-    /* background-color: #8BC34A; */
-    /* background-color: black; */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+}
+.animation1{
+    /* background-color: #8BC34A; */
+    /* background-color: black; */
 }
 .layer1{
     color:#9c27b0;
@@ -39,18 +41,20 @@ body{
 .section3{
     transform: translate(210px,10px);
 }
+.section1:hover, .section2:hover, .section3:hover{
+    cursor: pointer;
+}
 .box1{
     width: 100px;
     height: 100px;
     background: pink;
 }
+
+
 .animation2{
-    width: 100%;
-    height: 100%;
-    display: flex;
     justify-content: space-evenly;
-    align-items: center;
     position: relative;
+    background-color: red;
 }
 .line{
     width: 90px;
@@ -58,19 +62,60 @@ body{
     background-color: white;
     opacity: 0.6;
 }
+.line:hover{
+    cursor: pointer;
+}
 #main{
     height:100%;
     /* background-color: black; */
 }
 
-.box1{
-
+.animation3{
+    background-color: #520052;
+}
+#grid {
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
+    height: 84vh;
+    width: 98vh;
+    /* background-color: yellow; */
+    transition: .15s ease-in 0s;
 }
 
-.box2{
-
+#verticalLines{
+    /* background-color: green; */
+    height: 84vh;
+    width: 98vh;
+    position: absolute;
+    z-index: 1;
+    /* opacity: 0.2; */
 }
-
-.box3{
-
+.verticalLine{
+    height: 84vh;
+    width: 2vh;
+    background-color: orange;
+}
+#horizontalLines{
+    height: 84vh;
+    width: 98vh;
+    position: absolute;
+    /* opacity: .4; */
+}
+.horizontalLine{
+    width: 98vh;
+    height: 2vh;
+    margin: 9vh 0;
+    background-color: yellow;
+}
+.empty {
+    height: 12vh;
+    width: 12vh;
+    border-Radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 7vh;
+    background-color: whitesmoke;
+    box-shadow: inset 1vh 1vh 1vh gray;
 }
