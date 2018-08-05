@@ -5,6 +5,10 @@ body{
     height: 100vh;
     background-color: black;
 }
+#main{
+    height:100%;
+    /* background-color: black; */
+}
 .container{
     width: 100%;
     height: 100%;
@@ -49,8 +53,6 @@ body{
     height: 100px;
     background: pink;
 }
-
-
 .animation2{
     justify-content: space-evenly;
     position: relative;
@@ -65,50 +67,116 @@ body{
 .line:hover{
     cursor: pointer;
 }
-#main{
-    height:100%;
-    /* background-color: black; */
-}
 
 .animation3{
     background-color: #520052;
 }
 #grid {
     display: grid;
-    grid-template: repeat(6, 1fr) / repeat(7, 1fr);
+    /* grid-template: repeat(6, 1fr) / repeat(7, 1fr);
     justify-items: center;
     align-items: center;
     height: 84vh;
     width: 98vh;
-    /* background-color: yellow; */
+    background-color: yellow;*/
     transition: .15s ease-in 0s;
 }
 
-#verticalLines{
+#verticalLines:hover{
     /* background-color: green; */
-    height: 84vh;
+}
+#verticalLines{
+    /* height: 84vh; */
     width: 98vh;
-    position: absolute;
-    z-index: 1;
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-evenly;
     /* opacity: 0.2; */
 }
-.verticalLine{
-    height: 84vh;
-    width: 2vh;
-    background-color: orange;
-}
+
 #horizontalLines{
     height: 84vh;
-    width: 98vh;
+    /* width: 98vh; */
     position: absolute;
     /* opacity: .4; */
+}
+.verticalLine{
+    /* z-index: 1; */
+    height: 84vh;
+    width: 2vh;
+    background-color: black;
+}
+.verticalLine:hover{
+    background-color: green;
 }
 .horizontalLine{
     width: 98vh;
     height: 2vh;
     margin: 9vh 0;
-    background-color: yellow;
+    /* background-color: yellow; */
+    background-color: pink;
 }
+.horizontalLine:hover{
+    background-color: orange;
+}
+.animation4{
+    background-color: yellow;
+    justify-content: space-evenly;
+    background-image: url('dark_night.jpg');
+}
+.ball{
+    width: 60vh;
+    height: 60vh;
+    /* opacity: 0.7; */
+    border-radius: 50%;
+
+    animation-duration: 15s;
+    /* animation-delay: 1s; */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.ball1{
+    /* background-color: red; */
+    animation-name: slideright;
+    background-image: url('sun.png');
+
+}
+.moon{
+    /* background-color: blue; */
+    animation-name: slideleft;
+    background-image: url('moon.png');
+
+}
+
+
+@keyframes slideleft {
+  0% {
+    transform: translateX(-0vw);
+  }
+
+  50% {
+    transform: translateX(50vw);
+  }
+  100% {
+    transform: translateX(-0vw);
+  }
+}
+@keyframes slideright {
+  0% {
+    transform: translateX(0vw);
+  }
+  50% {
+    transform: translateX(-50vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+
 .empty {
     height: 12vh;
     width: 12vh;
