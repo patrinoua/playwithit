@@ -67,7 +67,19 @@ body{
 .line:hover{
     cursor: pointer;
 }
-
+.fourthRectangle{
+  background: purple;
+  width: 186px;
+  height: 400px;
+}
+.smallRectangle{
+  background: yellow;
+  float: left;
+  clip-path: circle(50%);
+  shape-outside: circle(50%);
+  width: 130px;
+  height: 131px;
+}
 .animation3{
     background-color: #520052;
 }

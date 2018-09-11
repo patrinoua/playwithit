@@ -49,7 +49,7 @@
 
     // animation 2
     $('.animation2').click(function(e){
-        $('.line').animate({
+        $('.line, .fourthRectangle').animate({
             opacity: 0.25,
             left: "+=50",
             height: "toggle"
@@ -117,5 +117,5 @@
     })
 
     //animation4
-    
+
 })();
